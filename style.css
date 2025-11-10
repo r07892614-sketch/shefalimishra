@@ -1,0 +1,138 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Background */
+body {
+  background: linear-gradient(135deg, #000000, #1a1a1a, #8b004e, #ff66a3);
+  background-size: 400% 400%;
+  animation: moveBg 12s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #fff;
+}
+
+/* Wrapper */
+.wrapper {
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+}
+
+/* Card */
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 35px 25px;
+  box-shadow: 0 0 25px rgba(255, 105, 180, 0.35);
+  backdrop-filter: blur(12px);
+  animation: fadeIn 1.2s ease;
+}
+
+/* Profile Image */
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  border: 3px solid #ff66a3;
+  box-shadow: 0 0 20px rgba(255, 102, 163, 0.6);
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Title */
+h1 {
+  font-size: 1.5rem;
+  background: linear-gradient(90deg, #ff99cc, #ffe6f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.subs {
+  font-size: 0.9rem;
+  color: #ffd6f0;
+  margin-bottom: 20px;
+}
+
+/* About Text */
+.about {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #f3f3f3;
+  margin-bottom: 25px;
+}
+
+.about strong {
+  color: #ff66a3;
+}
+
+/* Timer */
+.timer-container p {
+  font-size: 0.9rem;
+  color: #e0b3c6;
+}
+
+#timer {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff80bf;
+  margin-top: 5px;
+}
+
+/* Button */
+#joinBtn {
+  background: linear-gradient(90deg, #ff80bf, #ffcc00);
+  border: none;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.8rem;
+  padding: 12px 30px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  animation: fadePulse 1.6s infinite alternate;
+}
+
+#joinBtn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 25px rgba(255, 204, 255, 0.7);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadePulse {
+  from { opacity: 0.7; transform: scale(1); }
+  to { opacity: 1; transform: scale(1.05); }
+}
+
+@keyframes moveBg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  h1 { font-size: 1.3rem; }
+  .about { font-size: 0.85rem; }
+  #joinBtn { padding: 10px 22px; font-size: 0.9rem; }
+}
